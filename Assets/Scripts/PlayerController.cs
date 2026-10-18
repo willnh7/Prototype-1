@@ -9,6 +9,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public float speed = 5.0f;
     public float turnSpeed = 100f;
+    public float pitchSpeed = 60.0f;
     public InputAction MoveAction;
     private Vector2 moveInput;
 
@@ -26,6 +27,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         // this is a comment, wowo
         transform.Translate(Vector3.forward * Time.deltaTime * speed * moveInput.y);
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * moveInput.x);
+        transform.Rotate(Vector3.right * Time.deltaTime * pitchSpeed * moveInput.y);
 
         
     }
